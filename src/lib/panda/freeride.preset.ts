@@ -26,7 +26,7 @@ const tokens = defineTokens({
 /**
  * Anima Reflection Panda CSS preset.
  */
-const anirefPreset = definePreset({
+const freeridePreset = definePreset({
   conditions,
   globalCss,
   theme: {
@@ -41,4 +41,4 @@ const anirefPreset = definePreset({
   },
 });
 
-export default anirefPreset;
+export default freeridePreset;
