@@ -24,7 +24,7 @@ const tokens = defineTokens({
 });
 
 /**
- * Anima Reflection Panda CSS preset.
+ * Freeride MN Panda CSS preset.
  */
 const freeridePreset = definePreset({
   conditions,
