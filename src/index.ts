@@ -15,7 +15,7 @@ export type { JsxStyleProps } from "generated/panda/types";
 // export Panda preset (to be used in downstream Panda configurations)
 export { default as freeridePreset } from "lib/panda/freeride.preset";
 
-// export * from "components/core";
+export * from "components/core";
 // export * from "components/primitives";
 // export * from "components/utility";
 

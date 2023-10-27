@@ -1,6 +1,6 @@
 import { defineConfig } from "@pandacss/dev";
 
-import freeridePreset from "lib/panda/freride.preset";
+import freeridePreset from "lib/panda/freeride.preset";
 
 /**
  * 🐼 Panda configuration.
