@@ -1,0 +1,91 @@
+{
+  "name": "@freeridemn/ui",
+  "description": "Freeride MN design system and library",
+  "version": "0.0.0",
+  "license": "MIT",
+  "packageManager": "yarn@3.6.3",
+  "main": "build/ui.js",
+  "module": "build/ui.mjs",
+  "types": "build/ui.d.ts",
+  "files": [
+    "build"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/freeridemn/ui"
+  },
+  "exports": {
+    ".": {
+      "require": "./build/ui.js",
+      "import": "./build/ui.mjs",
+      "types": "./build/ui.d.ts"
+    },
+    "./next": {
+      "require": "./build/next.js",
+      "import": "./build/next.mjs",
+      "types": "./build/next.d.ts"
+    },
+    "./index.css": "./build/ui.css"
+  },
+  "scripts": {
+    "dev": "panda codegen && concurrently --kill-others -n \"BUILD,PANDA,STORYBOOK\" -c \"#f13334,#ffc83d,#ff4785\" \"yarn build --watch\" \"yarn dev:css\" \"yarn storybook\"",
+    "dev:css": "panda --watch",
+    "prepare:css": "panda codegen",
+    "build": "panda codegen && tsup",
+    "format": "prettier . --write",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx src",
+    "storybook": "storybook dev --quiet --no-open -p 6006",
+    "storybook:build": "panda codegen && storybook build"
+  },
+  "resolutions": {
+    "@zag-js/store": "^0.26.0"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@ark-ui/react": "^0.15.0",
+    "@storybook/addon-a11y": "^7.4.5",
+    "@storybook/addon-coverage": "^0.0.9",
+    "@storybook/addon-essentials": "^7.4.5",
+    "@storybook/addon-interactions": "^7.4.5",
+    "@storybook/addon-links": "^7.4.5",
+    "@storybook/blocks": "^7.4.5",
+    "@storybook/builder-webpack5": "^7.4.5",
+    "@storybook/manager-api": "^7.4.5",
+    "@storybook/nextjs": "^7.4.5",
+    "@storybook/react": "^7.4.5",
+    "@storybook/testing-library": "^0.2.2",
+    "@storybook/theming": "^7.4.5",
+    "@storybook/types": "^7.4.5",
+    "@types/node": "^20.7.0",
+    "@types/react": "^18.2.33",
+    "concurrently": "^8.2.2",
+    "eslint": "^8.50.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-prefer-arrow": "^1.2.3",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-storybook": "^0.6.14",
+    "eslint-plugin-testing-library": "^6.0.2",
+    "eslint-plugin-typescript-sort-keys": "^3.0.0",
+    "eslint-plugin-unused-imports": "^3.0.0",
+    "http-server": "^14.1.1",
+    "next": "^13.5.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^7.4.5",
+    "storybook-dark-mode": "^3.0.1",
+    "ts-node": "^10.9.1",
+    "@pandacss/dev": "^0.17.2",
+    "postcss": "^8.4.31",
+    "prettier": "^3.0.3",
+    "tsup": "^7.2.0",
+    "typescript": "^5.2.2",
+    "webpack": "^5.88.2"
+  }
+}
